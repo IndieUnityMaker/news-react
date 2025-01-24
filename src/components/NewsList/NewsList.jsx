@@ -1,3 +1,4 @@
+import widthSkeleton from '../../helpers/hocks/withSkeleton'
 import NewsItem from '../NewsItem/NewsItem'
 import styles from './styles.module.css'
 
@@ -12,4 +13,6 @@ const NewsList = ({ news }) => {
     )
 }
 
-export default NewsList
+const NewsListWidthSkeleton = widthSkeleton(NewsList, 'item', 10)
+
+export default NewsListWidthSkeleton
