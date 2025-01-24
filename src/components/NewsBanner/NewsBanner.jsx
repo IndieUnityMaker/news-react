@@ -1,5 +1,4 @@
 import { formatTimeAgo } from "../../helpers/formatTimeAgo"
-import widthSkeleton from "../../helpers/hocks/withSkeleton"
 import Image from "../Image/Image"
 import styles from './styles.module.css'
 
@@ -14,6 +13,5 @@ const NewsBanner = ({ item }) => {
     )
 }
 
-const NewsBannerWidthSkeleton = widthSkeleton(NewsBanner, 'banner', 1)
 
-export default NewsBannerWidthSkeleton
+export default NewsBanner
