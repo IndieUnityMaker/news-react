@@ -1,8 +1,13 @@
 import widthSkeleton from "../../helpers/hocks/withSkeleton"
+import { INews } from "../../helpers/interfaces"
 import NewsBanner from "../NewsBanner/NewsBanner"
 import styles from './styles.module.css'
 
-const BannersList = ({ banners }) => {
+interface Props {
+    banners?: INews[] | null
+}
+
+const BannersList = ({ banners } : Props) => {
 
     return(
             <ul className={styles.banners}>
@@ -15,6 +20,6 @@ const BannersList = ({ banners }) => {
     )
 }
 
-const BannersListWidthSkeleton = widthSkeleton(BannersList, 'banner', 12, 'row')
+const BannersListWidthSkeleton = widthSkeleton<Props>(BannersList, 'banner', 12, 'row')
 
 export default BannersListWidthSkeleton
